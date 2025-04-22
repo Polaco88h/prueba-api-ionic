@@ -24,7 +24,7 @@ export class Tab1Page {
            next : (data) => { this.usuarios = data; },
           error :(error) => { console.log(error); }
      });
-        console.log("Usuuuario: " + this.usuarios);
+        console.log("Usuario: " + this.usuarios);
     }
 
   
