@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pestaña 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- mostramos los datos al usuario mediante HTML -->
+    <h2>Datos de servidor</h2>
+    <ion-list>
+    <ion-item *ngFor="let usuario of usuarios">
+    <ion-label>{{usuario.id}} - {{usuario.name}}</ion-label>
+    </ion-item>
+    </ion-list>
+   
+    <!-- bottom -->
+    <ion-fab slot="fixed" vertical="bottom 50px" horizontal="end"  (click)= llamarApi();>
+      <ion-fab-button>
+        <ion-icon name="chevron-up-circle"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">   
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>
